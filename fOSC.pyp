@@ -165,7 +165,7 @@ class OSC():
                     value, rest = table[tag](rest)
                     decoded.append(value)
             else:
-                print "OSCMessage's typetag-string lacks the magic ',' "
+                print("OSCMessage's typetag-string lacks the magic ',' ")
 
         return decoded
 
@@ -290,9 +290,9 @@ class OSCReceiver():
                 if self.RecordMessage:
                     c4d.CallCommand(12412) # Play Forwards
             except Exception as inst:
-                print "error setting up receiver"
-                print type(inst)
-                print inst
+                print("error setting up receiver")
+                print(type(inst))
+                print(inst)
                 return
             self.SetTimer(10)
             self.updateInterface()
@@ -309,9 +309,9 @@ class OSCReceiver():
                 if self.RecordMessage:
                     c4d.CallCommand(12412) # Play Forwards (this command is a toggle, call again to pause the playback)
             except Exception as inst:
-                print "error deleting receiver, it may not exist. Check the setup function and runtime functions. "
-                print type(inst)
-                print inst
+                print("error deleting receiver, it may not exist. Check the setup function and runtime functions. ")
+                print(type(inst))
+                print(inst)
             self.SetTimer(0)
             self.updateInterface()
             self.ServerStarted = False
@@ -325,7 +325,7 @@ class OSCDialog(c4d.gui.GeDialog):
         
         # Lambdas
         self.AddEmpty = lambda: self.AddStaticText(0,0,0,0," ")
-        self.AddHeader = lambda (text): self.AddStaticText(
+        self.AddHeader = lambda text: self.AddStaticText(
             id    = 0,
             flags = c4d.BFH_LEFT|c4d.BFV_CENTER,
             initw = 150,

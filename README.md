@@ -1,4 +1,4 @@
-# fOSC v1.1.1
+# fOSC v1.1.2
 
 ## Introduction
 
